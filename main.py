@@ -8,7 +8,7 @@ from flask_bootstrap import Bootstrap5
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", 'sqlite:///database.db')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') 
 Bootstrap5(app)
 
