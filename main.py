@@ -5,10 +5,11 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import URL
 import shortuuid
 from flask_bootstrap import Bootstrap5
+import os
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['SECRET_KEY'] = 'ABcjbeqruyhcbveHDBUdsc@&*hg2yedbwycb' 
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') 
 Bootstrap5(app)
 
 # creating database
