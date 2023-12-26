@@ -1,0 +1,6 @@
+Flask==2.1.5
+Flask-WTF==0.15.1
+SQLAlchemy==1.4.33
+shortuuid==1.0.1
+WTForms==2.3.3
+Flask-Bootstrap==5.1.1
